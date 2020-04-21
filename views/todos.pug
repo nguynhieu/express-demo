@@ -1,0 +1,10 @@
+extend ./layout/common
+block content
+
+  form(action="/todos/search", method="get")
+    input(name="q" id="search-box")
+    button(for="search-box") Search
+  ul
+    each todo in todoList
+      li= todo
+  a(class="btn btn-primary", href="/create") Create
